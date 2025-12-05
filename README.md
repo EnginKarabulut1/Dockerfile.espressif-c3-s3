@@ -6,7 +6,7 @@ It includes the Zephyr OS source tree, Zephyr SDK toolchains, Espressif HAL blob
 
 This container is ideal for:
 
-🧪 Embedded development
+🧪 Embedded development 
 ⚙️ Building and flashing Zephyr applications
 💻 Remote development with VS Code Server
 🧰 Reproducible builds (frozen Zephyr revision & SDK version)
