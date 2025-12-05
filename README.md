@@ -7,8 +7,11 @@ It includes the Zephyr OS source tree, Zephyr SDK toolchains, Espressif HAL blob
 This container is ideal for:
 
 🧪 Embedded development
+
 ⚙️ Building and flashing Zephyr applications
+
 💻 Remote development with VS Code Server
+
 🧰 Reproducible builds (frozen Zephyr revision & SDK version)
 
 -------------------------------------------------------------
@@ -16,14 +19,19 @@ VS Code Server
 With preinstalled extensions:
 
 C/C++ Tools
+
 CMake Tools
+
 Hex Editor
+
 Nordic Devicetree Viewer
 
 🖥️ SSH Support
 
 Includes an SSH server with:
+
 root login enabled
+
 default password: "zephyr"
 -------------------------------------------------------------
 Build the image (this will take some time):
