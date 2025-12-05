@@ -6,20 +6,22 @@ It includes the Zephyr OS source tree, Zephyr SDK toolchains, Espressif HAL blob
 
 This container is ideal for:
 
-🧪 Embedded development 
+🧪 Embedded development
 ⚙️ Building and flashing Zephyr applications
 💻 Remote development with VS Code Server
 🧰 Reproducible builds (frozen Zephyr revision & SDK version)
 
 -------------------------------------------------------------
 VS Code Server
-with preinstalled extensions:
+With preinstalled extensions:
+
 C/C++ Tools
 CMake Tools
 Hex Editor
 Nordic Devicetree Viewer
 
 🖥️ SSH Support
+
 Includes an SSH server with:
 root login enabled
 default password: "zephyr"
@@ -31,6 +33,5 @@ docker build -t env-zephyr-espressif-c3-s3 -f Dockerfile.espressif-c3-s3 .
 Run the image:
 
 docker run -it --rm -v "$(pwd)/workspace:/workspace" -w /workspace -p 2222:22 -p 8800:8800 env-zephyr-espressif-c3-s3
-
 
 
