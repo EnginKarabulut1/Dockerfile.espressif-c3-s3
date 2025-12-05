@@ -1,0 +1,106 @@
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  group-filter: [-optional]
+
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: acpica
+      revision: 8d24867bc9c9d81c81eeac59391cda59333affd4
+      path: modules/lib/acpica
+    - name: edtt
+      revision: c282625e694f0b53ea53e13231ea6d2f49411768
+      path: tools/edtt
+      groups:
+        - tools
+    - name: fatfs
+      revision: f4ead3bf4a6dab3a07d7b5f5315795c073db568d
+      path: modules/fs/fatfs
+      groups:
+        - fs
+    - name: hal_espressif
+      revision: 78f88d79bfdca7e84ec7aafb12c0ddd7440bf3d1
+      path: modules/hal/espressif
+      west-commands: west/west-commands.yml
+      groups:
+        - hal
+    - name: hal_xtensa
+      revision: 3cc9e3a9360be5c96c956dce84064b85439b6769
+      path: modules/hal/xtensa
+      groups:
+        - hal
+    - name: hostap
+      path: modules/lib/hostap
+      revision: 51698b0f5fdac2778484f565d4591fcb1dd92bc4
+    - name: liblc3
+      revision: 48bbd3eacd36e99a57317a0a4867002e0b09e183
+      path: modules/lib/liblc3
+    - name: littlefs
+      path: modules/fs/littlefs
+      groups:
+        - fs
+      revision: 8f5ca347843363882619d8f96c00d8dbd88a8e79
+    - name: loramac-node
+      revision: fb00b383072518c918e2258b0916c996f2d4eebe
+      path: modules/lib/loramac-node
+    - name: lvgl
+      revision: c016f72d4c125098287be5e83c0f1abed4706ee5
+      path: modules/lib/gui/lvgl
+    - name: mbedtls
+      revision: c5b06d89c9c498d8fc8659ce31f7e53137b6270f
+      path: modules/crypto/mbedtls
+      groups:
+        - crypto
+    - name: mcuboot
+      revision: c11e845e2483917d7478ba1a7a3591a9f4e8d4a2
+      path: bootloader/mcuboot
+      groups:
+        - bootloader
+    - name: mipi-sys-t
+      path: modules/debug/mipi-sys-t
+      groups:
+        - debug
+      revision: 5a9d6055b62edc54566d6d0034d9daec91749b98
+    - name: net-tools
+      revision: 64d7acc661ae2772282570f21beab85d02f2f35c
+      path: tools/net-tools
+      groups:
+        - tools
+    - name: openthread
+      revision: 2bc7712f57af22058770d1ef131ad3da79a0c764
+      path: modules/lib/openthread
+    - name: percepio
+      path: modules/debug/percepio
+      revision: 132ed87d617578a6cb70a2443f43e117c315e0f0
+      groups:
+        - debug
+    - name: picolibc
+      path: modules/lib/picolibc
+      revision: ca8b6ebba5226a75545e57a140443168a26ba664
+    - name: segger
+      revision: 9f08435a79d41133d7046b7c59d1b25929eda450
+      path: modules/debug/segger
+      groups:
+        - debug
+    - name: tinycrypt
+      revision: 1012a3ebee18c15ede5efc8332ee2fc37817670f
+      path: modules/crypto/tinycrypt
+      groups:
+        - crypto
+    - name: uoscore-uedhoc
+      revision: 54abc109c9c0adfd53c70077744c14e454f04f4a
+      path: modules/lib/uoscore-uedhoc
+    - name: zcbor
+      revision: 9b07780aca6fb21f82a241ba386ad9b379809337
+      path: modules/lib/zcbor
+
+  self:
+    path: zephyr
+    west-commands: scripts/west-commands.yml
+    import: submanifests
